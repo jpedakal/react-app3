@@ -6,7 +6,7 @@ const Routing = () => {
     return (
         <div>
             <BrowserRouter>
-            <Route exact path="/" component={Home}></Route>
+                <Route exact path="/" component={Home}></Route>
             </BrowserRouter>
         </div>
     )
