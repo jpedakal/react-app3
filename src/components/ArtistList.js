@@ -18,7 +18,7 @@ const ArtistList = (props) => {
             })
         } else {
             return (
-                <img src="/images/loader.gif"></img>
+                <img src="/images/loader.gif" alt="loading"></img>
             )
         }
     }
