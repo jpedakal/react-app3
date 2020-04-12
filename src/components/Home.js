@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import Banner from './Banner';
+import ArtistList from './ArtistList';
 
 const url = "http://localhost:5000/artist";
 
@@ -16,6 +17,7 @@ class Home extends Component {
         return (
             <Fragment>
                 <Banner />
+                <ArtistList artist={this.state.artist}/>
             </Fragment>
         )
     }
