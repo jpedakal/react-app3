@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ArtistList = (props) => {
-    console.log(props);
-    const renderList = ( artistData ) => {
-        console.log(typeof(artistData))
+
+    const renderList = ( {artistData} ) => {
+        console.log(artistData)
         if (artistData) {
             return artistData.map((item, index) => {
                 return (
