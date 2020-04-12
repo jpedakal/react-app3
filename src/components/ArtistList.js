@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ArtistList = (props) => {
-
-    const renderList = ({ artistData }) => {
+    console.log(props);
+    const renderList = ( artistData ) => {
+        console.log(typeof(artistData))
         if (artistData) {
-            console.log('jjjjj',artistData)
             return artistData.map((item, index) => {
                 return (
                     <Link to="/" key={index}>

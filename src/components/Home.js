@@ -12,7 +12,7 @@ class Home extends Component {
             artist: ""
         }
     }
-    
+
     render() {
         return (
             <Fragment>
@@ -29,7 +29,7 @@ class Home extends Component {
             .then((res) => res.json())
             .then((data) => {
                 this.setState({
-                    artist: JSON.stringify(data)
+                    artist: data
                 })
             })
     }
