@@ -12,12 +12,12 @@ class Home extends Component {
             artist: ""
         }
     }
+    
     render() {
-        console.log('>>>>' + this.state.artist);
         return (
             <Fragment>
                 <Banner />
-                <ArtistList artist={this.state.artist}/>
+                <ArtistList artistData={this.state.artist} />
             </Fragment>
         )
     }
