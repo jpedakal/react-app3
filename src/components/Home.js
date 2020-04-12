@@ -27,7 +27,7 @@ class Home extends Component {
             .then((res) => res.json())
             .then((data) => {
                 this.setState({
-                    artist: data
+                    artist: JSON.stringify(data)
                 })
             })
     }
