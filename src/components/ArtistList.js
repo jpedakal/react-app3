@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ArtistList = (props) => {
 
     const renderList = ({ artistData }) => {
-        console.log(artistData)
+      
         if (artistData) {
             return artistData.map((item, index) => {
                 const myImage= {
