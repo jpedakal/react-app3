@@ -12,6 +12,7 @@ class Home extends Component {
         }
     }
     render() {
+        console.log('>>>>' + this.state.artist);
         return (
             <Fragment>
                 <Banner />
@@ -20,7 +21,10 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        fetch(url, { method: "GET" })
+        fetch(url, {
+            method: "GET",
+            mode: 'no-cors'
+        })
             .then(res => res.json())
             .then((data) => {
                 this.setState({
