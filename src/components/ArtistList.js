@@ -2,8 +2,18 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const ArtistList = (props) => {
-    
-    const renderList= ()=>{
+
+    const renderList = ({ artistData }) => {
+        if (artistData) {
+            console.log('jjjjj',artistData)
+            return artistData.map((item, index) => {
+                return (
+                    <Link to="/" key={index}>
+                        <div>{item.name}</div>
+                    </Link>
+                )
+            })
+        }
 
     }
 
@@ -14,3 +24,5 @@ const ArtistList = (props) => {
         </div>
     )
 }
+
+export default ArtistList;
