@@ -2,26 +2,31 @@ import React, { Component } from 'react';
 import Header from './Header';
 import Axios from 'axios';
 
-const url= ""
+const url = "http://localhost:5000/artist"
 
 class Artist extends Component {
-  constructor(){
-      super()
+    constructor(props) {
+        super(props)
 
-      this.state={
-          details: ""
-      }
-  }
+        this.state = {
+            details: ""
+        }
+    }
     render() {
+        var mydata = this.state.details;
         return (
             <div>
                 <Header />
+                <div className="artist_bio">
+                    <h3>{mydata.name}</h3>
+                </div>
             </div>
         )
     }
 
-    componentDidMount(){
-        
+    componentDidMount() {
+        Axios.get(`${url}/${this.props.match.params.id}`)
+            .then((response) => { this.setState({ details: response.data }) })
     }
 }
 
