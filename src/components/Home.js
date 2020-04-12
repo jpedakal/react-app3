@@ -22,10 +22,9 @@ class Home extends Component {
 
     componentDidMount() {
         fetch(url, {
-            method: "GET",
-            mode: 'no-cors'
+            method: 'GET'
         })
-            .then(res => res.json())
+            .then((res) => res.json())
             .then((data) => {
                 this.setState({
                     artist: data
