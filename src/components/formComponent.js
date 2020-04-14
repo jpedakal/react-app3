@@ -11,6 +11,15 @@ class FormsComponent extends Component {
             bio: "",
             genre: ""
         }
+
+        this.handleChangeName=this.handleChangeName.bind(this);
+        this.handleChangeCover=this.handleChangeCover.bind(this);
+        this.handleChangeBio=this.handleChangeBio.bind(this);
+        this.handleChangeGenre=this.handleChangeGenre.bind(this);
+    }
+
+    handleChangeName(event){
+        this.setState({name: event.target.value})
     }
     render() {
         return (
