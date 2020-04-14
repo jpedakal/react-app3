@@ -31,7 +31,14 @@ class FormsComponent extends Component {
         this.setState({ genre: event.target.genre })
     }
     handleSubmit() {
-
+        var random = Math.floor(Math.random() * 10000);
+        var data = {
+            "id": random,
+            "name": this.state.name,
+            "cover": this.state.cover,
+            "bio": this.state.bio,
+            "genre": this.state.genre
+        }
     }
     render() {
         return (
