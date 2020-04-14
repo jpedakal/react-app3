@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Header from './Header';
 
+const url = "http://localhost:5000/artist";
 class FormsComponent extends Component {
     constructor() {
         super()
