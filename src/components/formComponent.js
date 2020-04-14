@@ -24,25 +24,25 @@ class FormsComponent extends Component {
                         <div className="panel-body">
                             <div className="form-group">
                                 <label>Name:</label>
-                                <input type="text" className="form-group" value={this.state.name} onChange={this.handleChangeName}></input>
+                                <input type="text" className="form-control" value={this.state.name} onChange={this.handleChangeName}></input>
                             </div>
                         </div>
                         <div className="panel-body">
                             <div className="form-group">
                                 <label>Cover:</label>
-                                <input type="text" className="form-group" value={this.state.cover} onChange={this.handleChangeCover}></input>
+                                <input type="text" className="form-control" value={this.state.cover} onChange={this.handleChangeCover}></input>
                             </div>
                         </div>
                         <div className="panel-body">
                             <div className="form-group">
                                 <label>Bio:</label>
-                                <input type="text" className="form-group" value={this.state.bio} onChange={this.handleChangeBio}></input>
+                                <input type="text" className="form-control" value={this.state.bio} onChange={this.handleChangeBio}></input>
                             </div>
                         </div>
                         <div className="panel-body">
                             <div className="form-group">
                                 <label>Genre:</label>
-                                <input type="text" className="form-group" value={this.state.genre} onChange={this.handleChangeGenre}></input>
+                                <input type="text" className="form-control" value={this.state.genre} onChange={this.handleChangeGenre}></input>
                             </div>
                         </div>
                     </div>
