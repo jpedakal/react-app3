@@ -17,9 +17,11 @@ class FormsComponent extends Component {
         this.handleChangeCover = this.handleChangeCover.bind(this);
         this.handleChangeBio = this.handleChangeBio.bind(this);
         this.handleChangeGenre = this.handleChangeGenre.bind(this);
+        this.handleSubmit= this.handleSubmit.bind(this);
     }
 
     handleChangeName(event) {
+        console.log('hj', event.target.value)
         this.setState({ name: event.target.value })
     }
     handleChangeCover(event) {
@@ -62,7 +64,7 @@ class FormsComponent extends Component {
                         <div className="panel-body">
                             <div className="form-group">
                                 <label>Name:</label>
-                                <input type="text" className="form-control" value={this.state.name} onChange={this.handleChangeName}></input>
+                                <input type="text" className="form-control" value={this.state.name} onChange={this.handleChangeName.bind(this)}></input>
                             </div>
                         </div>
                         <div className="panel-body">
