@@ -21,6 +21,11 @@ class FormsComponent extends Component {
                     <div className="panel-heading">
                         Artist Forms
                    </div>
+                    <div className="panel-body">
+                        <div className="form-group">
+
+                        </div>
+                    </div>
                 </div>
             </Fragment>
         )
