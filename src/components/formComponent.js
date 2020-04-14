@@ -39,6 +39,15 @@ class FormsComponent extends Component {
             "bio": this.state.bio,
             "genre": this.state.genre
         }
+
+        fetch(url, {
+            mathod: 'POST',
+            headers: {
+                'Accept':'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }).then(this.props.history.push('/'))
     }
     render() {
         return (
