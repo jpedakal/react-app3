@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Header from './Header';
 
-const url = "http://localhost:5000/artist";
+const url = "http://localhost:5000/create_artist";
 class FormsComponent extends Component {
     constructor() {
         super()
@@ -17,11 +17,10 @@ class FormsComponent extends Component {
         this.handleChangeCover = this.handleChangeCover.bind(this);
         this.handleChangeBio = this.handleChangeBio.bind(this);
         this.handleChangeGenre = this.handleChangeGenre.bind(this);
-        this.handleSubmit= this.handleSubmit.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChangeName(event) {
-        console.log('hj', event.target.value)
         this.setState({ name: event.target.value })
     }
     handleChangeCover(event) {
@@ -31,7 +30,7 @@ class FormsComponent extends Component {
         this.setState({ bio: event.target.value })
     }
     handleChangeGenre(event) {
-        this.setState({ genre: event.target.genre })
+        this.setState({ genre: event.target.value })
     }
     handleSubmit() {
         var random = Math.floor(Math.random() * 10000);
@@ -42,14 +41,14 @@ class FormsComponent extends Component {
             "bio": this.state.bio,
             "genre": this.state.genre
         }
-
+        console.log(data);
         fetch(url, {
-            mathod: 'POST',
+            method: "post",
+            body: JSON.stringify(data),
             headers: {
-                'Accept':'application/json',
-                'Content-Type': 'application/json'
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
             },
-            body: JSON.stringify(data)
         }).then(this.props.history.push('/'))
     }
     render() {
@@ -64,7 +63,7 @@ class FormsComponent extends Component {
                         <div className="panel-body">
                             <div className="form-group">
                                 <label>Name:</label>
-                                <input type="text" className="form-control" value={this.state.name} onChange={this.handleChangeName.bind(this)}></input>
+                                <input type="text" className="form-control" value={this.state.name} onChange={this.handleChangeName}></input>
                             </div>
                         </div>
                         <div className="panel-body">
