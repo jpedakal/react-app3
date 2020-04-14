@@ -45,7 +45,7 @@ class FormsComponent extends Component {
                                 <input type="text" className="form-control" value={this.state.genre} onChange={this.handleChangeGenre}></input>
                             </div>
                         </div>
-                        <button className="btn  btn-success" onClick={this.handleSubmit}>Submit</button>
+                        <button type="button" className="btn  btn-success" onClick={this.handleSubmit}>Submit</button>
                     </div>
                 </div>
             </Fragment>
