@@ -13,8 +13,6 @@ const ArtistList = (props) => {
                 return (
                     <Link to={`/details/${item.name}`} key={index} style={myImage} className="artist_item">
                         <div>{item.name}</div>
-                        <div>{item.bio}</div>
-                        <div>{item.genre}</div>
                     </Link>
                 )
             })
