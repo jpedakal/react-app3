@@ -30,7 +30,9 @@ class FormsComponent extends Component {
     handleChangeGenre(event) {
         this.setState({ genre: event.target.genre })
     }
-    
+    handleSubmit() {
+
+    }
     render() {
         return (
             <Fragment>
