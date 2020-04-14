@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 const ArtistList = (props) => {
 
     const renderList = ({ artistData }) => {
-      
+
         if (artistData) {
             return artistData.map((item, index) => {
-                const myImage= {
+                const myImage = {
                     background: `url('/images/covers/${item.cover}.jpg')`
                 }
                 return (
