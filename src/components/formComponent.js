@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Header from './Header';
 
+const url = "http://localhost:5000/create_artist";
 class FormsComponent extends Component {
     constructor() {
         super()
@@ -16,6 +17,7 @@ class FormsComponent extends Component {
         this.handleChangeCover = this.handleChangeCover.bind(this);
         this.handleChangeBio = this.handleChangeBio.bind(this);
         this.handleChangeGenre = this.handleChangeGenre.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChangeName(event) {
@@ -28,9 +30,27 @@ class FormsComponent extends Component {
         this.setState({ bio: event.target.value })
     }
     handleChangeGenre(event) {
-        this.setState({ genre: event.target.genre })
+        this.setState({ genre: event.target.value })
     }
-    
+    handleSubmit() {
+        var random = Math.floor(Math.random() * 10000);
+        var data = {
+            "id": random,
+            "name": this.state.name,
+            "cover": this.state.cover,
+            "bio": this.state.bio,
+            "genre": this.state.genre
+        }
+        console.log(data);
+        fetch(url, {
+            method: "post",
+            body: JSON.stringify(data),
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+        }).then(this.props.history.push('/'))
+    }
     render() {
         return (
             <Fragment>

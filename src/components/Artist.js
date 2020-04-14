@@ -19,6 +19,8 @@ class Artist extends Component {
                 <Header />
                 <div className="artist_bio">
                     <h3>{mydata.name}</h3>
+                    <h3>{mydata.genre}</h3>
+                    <p>{mydata.bio}</p>    
                 </div>
             </div>
         )
