@@ -6,7 +6,6 @@ class FormsComponent extends Component {
         super()
 
         this.state = {
-            id: "",
             name: "",
             cover: "",
             bio: "",
@@ -23,7 +22,8 @@ class FormsComponent extends Component {
                    </div>
                     <div className="panel-body">
                         <div className="form-group">
-
+                           <label>Name</label>
+                           <input type="text" className="form-group" value={this.state.name}></input>
                         </div>
                     </div>
                 </div>
