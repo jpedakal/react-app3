@@ -12,15 +12,25 @@ class FormsComponent extends Component {
             genre: ""
         }
 
-        this.handleChangeName=this.handleChangeName.bind(this);
-        this.handleChangeCover=this.handleChangeCover.bind(this);
-        this.handleChangeBio=this.handleChangeBio.bind(this);
-        this.handleChangeGenre=this.handleChangeGenre.bind(this);
+        this.handleChangeName = this.handleChangeName.bind(this);
+        this.handleChangeCover = this.handleChangeCover.bind(this);
+        this.handleChangeBio = this.handleChangeBio.bind(this);
+        this.handleChangeGenre = this.handleChangeGenre.bind(this);
     }
 
-    handleChangeName(event){
-        this.setState({name: event.target.value})
+    handleChangeName(event) {
+        this.setState({ name: event.target.value })
     }
+    handleChangeCover(event) {
+        this.setState({ cover: event.target.value })
+    }
+    handleChangeBio(event) {
+        this.setState({ bio: event.target.value })
+    }
+    handleChangeGenre(event) {
+        this.setState({ genre: event.target.genre })
+    }
+    
     render() {
         return (
             <Fragment>
