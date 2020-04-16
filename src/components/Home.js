@@ -17,7 +17,7 @@ class Home extends Component {
     render() {
         return (
             <Fragment>
-                <Header/>
+                <Header />
                 <Banner />
                 <ArtistList artistData={this.state.artist} />
             </Fragment>
