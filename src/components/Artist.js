@@ -5,6 +5,7 @@ import Axios from 'axios';
 const url = "http://localhost:5000/artist"
 
 class Artist extends Component {
+    
     constructor(props) {
 
         super(props)
@@ -13,7 +14,7 @@ class Artist extends Component {
             details: ""
         }
     }
-    
+
     render() {
         var mydata = this.state.details;
         return (
