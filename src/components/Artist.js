@@ -5,7 +5,7 @@ import Axios from 'axios';
 const url = "http://localhost:5000/artist"
 
 class Artist extends Component {
-    
+
     constructor(props) {
 
         super(props)
@@ -33,6 +33,7 @@ class Artist extends Component {
         Axios.get(`${url}/${this.props.match.params.id}`)
             .then((response) => { this.setState({ details: response.data }) })
     }
+    
 }
 
 export default Artist;
