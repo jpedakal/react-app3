@@ -6,6 +6,7 @@ const url = "http://localhost:5000/artist"
 
 class Artist extends Component {
     constructor(props) {
+        
         super(props)
 
         this.state = {
