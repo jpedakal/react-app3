@@ -13,6 +13,7 @@ class Artist extends Component {
             details: ""
         }
     }
+    
     render() {
         var mydata = this.state.details;
         return (
