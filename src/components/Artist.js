@@ -6,7 +6,7 @@ const url = "http://localhost:5000/artist"
 
 class Artist extends Component {
     constructor(props) {
-        
+
         super(props)
 
         this.state = {
@@ -21,7 +21,7 @@ class Artist extends Component {
                 <div className="artist_bio">
                     <h3>{mydata.name}</h3>
                     <h3>{mydata.genre}</h3>
-                    <p>{mydata.bio}</p>    
+                    <p>{mydata.bio}</p>
                 </div>
             </div>
         )
